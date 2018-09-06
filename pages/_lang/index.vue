@@ -10,7 +10,6 @@
 </template>
 
 <script>
-//    <Header :title="this.locale[this.$language].tricks"/>
 var locale = require('~/js/locale.js');
 
 import TrickCard from "~/components/TrickCard.vue";

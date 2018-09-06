@@ -7,7 +7,6 @@ console.log("Generating dynamic routes file...");
 settingsObj = require('./settings.json');
 
 //get first [language]-data.json file based on first language in settings json file.
-//dataObj = require('../../data/' + settingsObj.languages[0] + '-data.json');
 dataObj = require(process.cwd()+"/"+settingsObj.rootDir + settingsObj.languages[0] + '-data.json');
 
 //create array of all tricks ids

@@ -15,7 +15,6 @@
 </template>
 
 <script>
-//<source src="~/assets/clicker/click_sound_1.wav" type="audio/wav">
         
 export default {
   name: "Clicker",
@@ -48,7 +47,6 @@ export default {
       //button press animation logic
       $("#state-off")[0].style.visibility = "hidden";
       setTimeout(function() {
-        console.log("timeout motherfuckers");
         $("#state-off")[0].style = "";
       }, 100);
       //sound wave animation logic
