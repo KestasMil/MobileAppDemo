@@ -1,0 +1,26 @@
+{
+  "name": "dogo-app",
+  "version": "1.0.0",
+  "description": "My slick Nuxt.js project",
+  "author": "Kestutis Milius",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "generate-data": "node node_scripts/dogo-tools/generate-data",
+    "generate-routes": "node node_scripts/dogo-tools/generate-routes"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "jquery": "^3.3.1",
+    "nuxt": "^1.0.0",
+    "slick-carousel": "file:local_packages/slick-1.8.1"
+  },
+  "devDependencies": {
+    "contentful": "^6.1.1",
+    "cross-env": "^5.0.1",
+    "html-server": "^0.1.1"
+  }
+}

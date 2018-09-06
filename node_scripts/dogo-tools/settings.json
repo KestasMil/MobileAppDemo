@@ -1,0 +1,12 @@
+{
+    "languages" : [
+        "en-US",
+        "lt",
+        "de",
+        "es",
+        "pt",
+        "fr",
+        "ru"
+    ],
+    "rootDir" : "static/data/"
+}
