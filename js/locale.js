@@ -1,30 +1,37 @@
 module.exports = {
     "en-US": {
         tricks: "Tricks",
-        clicker: "Clicker"
+        clicker: "Clicker",
+        help: "Help"
     },
     lt: {
         tricks: "Triukai",
-        clicker: "Klikeris"
+        clicker: "Klikeris",
+        help: "Pagalba"
     },
     de: {
         tricks: "Kommandos",
-        clicker: "Clicker"
+        clicker: "Clicker",
+        help: "Hilfe"
     },
     es: {
         tricks: "Trucos",
-        clicker: "Clicker"
+        clicker: "Clicker",
+        help: "Ayuda"
     },
     ru: {
         tricks: "Трюки",
-        clicker: "Кликер"
+        clicker: "Кликер",
+        help: "Справка"
     },
     fr: {
         tricks: "Tours",
-        clicker: "Clicker"
+        clicker: "Clicker",
+        help: "Aide"
     },
     pt: {
         tricks: "Truques",
-        clicker: "Clicador"
+        clicker: "Clicador",
+        help: "Ajuda"
     }
 };

@@ -10,7 +10,8 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "generate-data": "node node_scripts/dogo-tools/generate-data",
-    "generate-routes": "node node_scripts/dogo-tools/generate-routes"
+    "generate-routes": "node node_scripts/dogo-tools/generate-routes",
+    "generate-faq": "node node_scripts/dogo-tools/generate-faq"
   },
   "dependencies": {
     "axios": "^0.18.0",

@@ -8,5 +8,9 @@
         "fr",
         "ru"
     ],
+    "faqsToIgnore" : [
+        11,
+        13
+    ],
     "rootDir" : "static/data/"
 }

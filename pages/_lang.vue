@@ -8,8 +8,6 @@
 //Importing Vue to set global variable $language
 import Vue from "vue";
 
-import btn from "~/components/btn.vue";
-
 import axios from "axios";
 import dogoConfig from "../dogo-config.js";
 
@@ -29,7 +27,6 @@ export default {
     };
   },
   components: {
-    btn: btn
   },
   asyncData({ req, params, isServer }) {
     var lang = params.lang || "en-US";

@@ -13,6 +13,12 @@
                 <div class="btn-caption">{{this.locale[this.$language].tricks}}</div>
             </div>
             </nuxt-link>
+            <nuxt-link :to="{ name: 'lang-faq', params: { lang: this.$language } }">
+            <div class="btn">
+                <div id="faq-img" class="img-container"></div>
+                <div class="btn-caption">{{this.locale[this.$language].help}}</div>
+            </div>
+            </nuxt-link>
         </div>
     </div>
 </template>
@@ -59,6 +65,9 @@ export default {
 #tricks-img {
   background-image: url("../assets/Trick_Icon.png");
 }
+#faq-img {
+  background-image: url("../assets/Faq_Icon.png");
+}
 .img-container {
   background-size: contain;
   background-repeat: no-repeat;
@@ -74,5 +83,8 @@ export default {
 }
 .nuxt-link-exact-active #tricks-img {
   background-image: url("../assets/Trick_Icon_Active.png");
+}
+.nuxt-link-exact-active #faq-img {
+  background-image: url("../assets/Faq_Icon_Active.png");
 }
 </style>
