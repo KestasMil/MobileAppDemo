@@ -29,3 +29,7 @@ $ npm run generate-data
 # Generate/Update file static/data/routes.json containing list of routes available in the web app.
 $ npm run generate-routes
 ```
+``` bash
+# Generate/Update file static/data/[lang]-faq.json containing FAQs of the application.
+$ npm run generate-faq
+```
