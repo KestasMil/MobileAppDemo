@@ -30,8 +30,14 @@ export default {
   name: "Header",
   data() {
     return {
-      locale: locale
+      locale: locale,
     };
+  },
+  components: {
+
+  },
+  methods: {
+
   }
 };
 </script>
