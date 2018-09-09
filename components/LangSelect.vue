@@ -2,15 +2,13 @@
 <template>
   <transition name="modal">
     <div class="modal-mask">
-      <div class="modal-wrapper">
+      <div class="modal-wrapper" @click="checkIfOutOfBounds($event)">
         <div class="modal-container">
-
           <div class="modal-header">
             <slot name="header">
               {{ title }}
             </slot>
           </div>
-
           <div class="modal-body">
             <slot name="body">
               <ul>
@@ -45,7 +43,6 @@
               </ul>
             </slot>
           </div>
-
           <div class="modal-footer">
             <slot name="footer">
               <button class="modal-default-button" @click="$emit('close')">
@@ -70,6 +67,13 @@ export default {
       this.$emit("close");
       this.$route.params.lang = lang;
       this.$router.push({ name: this.$route.name, params: this.$route.params });
+    },
+    checkIfOutOfBounds(event) {
+        if(event.path.findIndex(element => {
+            return element.className == "modal-container";
+        }) == -1) {
+            this.$emit('close');
+        }
     }
   }
 };
