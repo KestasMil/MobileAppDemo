@@ -1,15 +1,17 @@
-//file stream module
-const fs = require('fs');
-
 console.log("Generating dynamic routes file...");
 
+//file stream module
+const fs = require('fs');
 // Get settings
 settingsObj = require('./settings.json');
+//Routes added to the array below will get saved in routes file.
+var routes = [];
 
-//get first [language]-data.json file based on first language in settings json file.
+/*---------------------------------/
+Adding routes for tricks section.
+/---------------------------------*/
+
 dataObj = require(process.cwd()+"/"+settingsObj.rootDir + settingsObj.languages[0] + '-data.json');
-
-//create array of all tricks ids
 var tricksIds = [];
 
 dataObj.forEach(element => {
@@ -18,12 +20,28 @@ dataObj.forEach(element => {
     });
 });
 
-//create routes array.
-var routes = [];
 settingsObj.languages.forEach(lang => {
     routes.push(lang+"/");
     tricksIds.forEach(trickId => {
         routes.push(lang+"/"+trickId);
+    });
+});
+
+/*---------------------------------/
+Adding routes for FAQ section.
+/---------------------------------*/
+
+dataObj = require(process.cwd()+"/"+settingsObj.rootDir + settingsObj.languages[0] + '-faq.json');
+var faqIds = [];
+
+dataObj.forEach(element => {
+    faqIds.push(element.id);
+});
+
+settingsObj.languages.forEach(lang => {
+    routes.push(lang+"/faq");
+    faqIds.forEach(faqId => {
+        routes.push(lang+"/faq/"+faqId);
     });
 });
 
