@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Header :title="'Faq'" />
+        <Header :title="this.locale[this.$language].help" />
         <nuxt-link v-for="faq in faqs" :key="faq.id" :to="{ name: 'lang-faq-faqId', params: { faqId: faq.id, lang: $language } }">
           <div class="faq-list-item">
             {{ faq.title }}
@@ -11,6 +11,8 @@
 </template>
 
 <script>
+var locale = require('~/js/locale.js');
+
 import Header from "~/components/Header";
 import Footer from "~/components/Footer";
 
@@ -21,7 +23,8 @@ export default {
   props: [],
   data() {
     return {
-      faqs: []
+      faqs: [],
+      locale: locale
     };
   },
   asyncData({ req, params, isServer }) {
