@@ -55,7 +55,6 @@ export default {
 }
 .spacer {
   height: 2.2em;
-  margin-bottom: 10px;
 }
 .lang-icon {
   position: fixed;
