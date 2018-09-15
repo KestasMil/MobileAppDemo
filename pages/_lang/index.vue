@@ -5,6 +5,7 @@
       <div class="seperator">{{trick.levelName}}</div>
       <TrickCard v-for="trick in trick.tricks" :key="trick.id" :trick="trick" />
     </div>
+    <div class="list-end"></div>
     <Footer/>
   </div>
 </template>
@@ -32,4 +33,10 @@ export default {
 </script>
 
 <style scoped>
+.seperator {
+  margin: 7px 0 0 5px;
+}
+.list-end {
+  height: calc(5em);
+}
 </style>
