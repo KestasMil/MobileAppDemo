@@ -2,7 +2,7 @@
     <div>
       <Header :title="TrickName"/>
       <div class="dots-container"></div>
-      <div class="step-counter">Step 1</div>
+      <div class="step-counter">{{this.locale[this.$language].step.replace("%s", 1)}}</div>
       <div class="slick-container">
         <div class="steps-container" v-for="(step, index) in TrickSteps" :key="index">
           <div class="image" :style="setBackgroundImage(step.stepImage)"></div>
@@ -14,6 +14,8 @@
 </template>
 
 <script>
+var locale = require('~/js/locale.js');
+
 import "slick-carousel";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -31,7 +33,8 @@ export default {
   data() {
     return {
       TrickSteps: [],
-      TrickName: ""
+      TrickName: "",
+      locale: locale
     };
   },
   methods: {
@@ -75,12 +78,14 @@ export default {
   },
   mounted() {
     this.initSlickCarousel();
+    var text = this.locale[this.$language].step;
     $(".slick-container").on("swipe", function(event, slick, direction) {
-      $(".step-counter").text("Step " + (slick.currentSlide + 1));
+      //$(".step-counter").text("Step " + (slick.currentSlide + 1));
+      $(".step-counter").text( text.replace("%s", slick.currentSlide + 1) );
     });
     $(".slick-slide").on("click", function() {
       $(".slick-container").slick("slickNext");
-      $(".step-counter").text("Step " + ($(".slick-container")[0].slick.currentSlide + 1));      
+      $(".step-counter").text(text.replace("%s", $(".slick-container")[0].slick.currentSlide + 1));      
     });
   },
   updated() {
