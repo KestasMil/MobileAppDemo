@@ -4,6 +4,9 @@
     <div class="modal-mask">
       <div class="modal-wrapper" @click="checkIfOutOfBounds($event)">
         <div class="modal-container">
+          <button class="modal-default-button" @click="$emit('close')">
+            X
+          </button>
           <div class="modal-header">
             <slot name="header">
               {{ title }}
@@ -45,9 +48,6 @@
           </div>
           <div class="modal-footer">
             <slot name="footer">
-              <button class="modal-default-button" @click="$emit('close')">
-                X
-              </button>
             </slot>
           </div>
         </div>
@@ -105,6 +105,8 @@ export default {
   border-radius: 2px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
   transition: all 0.3s ease;
+  /*required for button to be placed correctly*/
+  position: relative;
 }
 
 .modal-header h3 {
@@ -117,7 +119,13 @@ export default {
 }
 
 .modal-default-button {
-  float: right;
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  color: #e48900;
 }
 
 /*
