@@ -54,10 +54,12 @@ export default {
   border-top: 1px solid rgb(235, 235, 235);
   background-color: rgb(255, 255, 255);
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .btn {
   /*border: 1px solid #ebebeb;*/
-  margin: 0px 20px;
+  margin: 0px 10px;
   padding: 5px;
 }
 .btn-caption {
