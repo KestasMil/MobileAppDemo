@@ -6,7 +6,9 @@
       <div class="slick-container">
         <div class="steps-container" v-for="(step, index) in TrickSteps" :key="index">
           <div class="image" :style="setBackgroundImage(step.stepImage)"></div>
-          <div class="description">{{step.description}}</div>
+          <div class="description-container">
+            <div class="description-text">{{step.description}}</div>
+          </div>
         </div>
       </div>
       <Footer/>
@@ -108,11 +110,16 @@ export default {
   margin-right: 10px;
 }
 
-.steps-container .description {
+.steps-container .description-container {
   text-align: center;
   font-size: 1em;
-  min-width: 200px;
   padding: 30px 10%;
+}
+
+.description-text {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .step-counter {

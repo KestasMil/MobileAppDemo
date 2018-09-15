@@ -55,5 +55,8 @@ export default {
 }
 .text {
     margin: 20px;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
 }
 </style>
