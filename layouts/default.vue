@@ -5,10 +5,11 @@
 </template>
 
 <style>
-@import url("https://fonts.googleapis.com/css?family=Oswald");
+/*@import url("https://fonts.googleapis.com/css?family=Oswald");*/
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 @import "~/assets/reset.css";
 
 * {
-  font-family: "Oswald", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 </style>
