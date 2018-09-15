@@ -41,7 +41,9 @@ export default {
           dots: true,
           appendDots: $(".dots-container"),
           dotsClass: "slick-dots",
-          arrows: false
+          arrows: false,
+          fade: true,
+          focusOnSelect: true
         });
       }
     },
@@ -75,7 +77,10 @@ export default {
     this.initSlickCarousel();
     $(".slick-container").on("swipe", function(event, slick, direction) {
       $(".step-counter").text("Step " + (slick.currentSlide + 1));
-      // left
+    });
+    $(".slick-slide").on("click", function() {
+      $(".slick-container").slick("slickNext");
+      $(".step-counter").text("Step " + ($(".slick-container")[0].slick.currentSlide + 1));      
     });
   },
   updated() {
